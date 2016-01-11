@@ -145,29 +145,29 @@ X_RESULT WinKeyInputDriver::GetState(uint32_t user_index,
       thumb_rx += SHRT_MIN;
     }
 
-    if (IS_KEY_DOWN(0x4C)) {
-      // L
+    if (IS_KEY_DOWN(0x48)) {
+      // 4
       buttons |= 0x4000;  // XINPUT_GAMEPAD_X
     }
-    if (IS_KEY_DOWN(VK_OEM_7)) {
-      // '
+    if (IS_KEY_DOWN(0x4a)) {
+      // 6
       buttons |= 0x2000;  // XINPUT_GAMEPAD_B
     }
-    if (IS_KEY_DOWN(VK_OEM_1)) {
-      // ;
+    if (IS_KEY_DOWN(0x49)) {
+      // 5
       buttons |= 0x1000;  // XINPUT_GAMEPAD_A
     }
-    if (IS_KEY_DOWN(0x50)) {
-      // P
+    if (IS_KEY_DOWN(0x38)) {
+      // 8
       buttons |= 0x8000;  // XINPUT_GAMEPAD_Y
     }
 
-    if (IS_KEY_DOWN(0x5A)) {
-      // Z
+    if (IS_KEY_DOWN(0x5b)) {
+      // Numpad Enter
       buttons |= 0x0020;  // XINPUT_GAMEPAD_BACK
     }
-    if (IS_KEY_DOWN(0x58)) {
-      // X
+    if (IS_KEY_DOWN(0x64)) {
+      // 0
       buttons |= 0x0010;  // XINPUT_GAMEPAD_START
     }
   }
@@ -286,11 +286,11 @@ X_RESULT WinKeyInputDriver::GetKeystroke(uint32_t user_index, uint32_t flags,
     virtual_key = 0x5803;  // VK_PAD_Y
   }
 
-  if (evt.vkey == (0x58)) {
+  if (evt.vkey == (0x64)) {
     // X
     virtual_key = 0x5814;  // VK_PAD_START
   }
-  if (evt.vkey == (0x5A)) {
+  if (evt.vkey == (0x5b)) {
     // Z
     virtual_key = 0x5815;  // VK_PAD_BACK
   }
